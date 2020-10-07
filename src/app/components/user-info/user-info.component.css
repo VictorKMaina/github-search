@@ -1,0 +1,30 @@
+#avatar {
+    width: 100%;
+    max-width: 230px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 5px double white;
+}
+#full-name {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+#username {
+    color: rgb(120, 120, 120);
+    font-size: 0.9em;
+}
+.repo-name {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+.repo-desc {
+    color: rgb(120, 120, 120);
+}
+#title {
+    font-size: 2em;
+    font-family: Poppins;
+    font-weight: 800;
+}

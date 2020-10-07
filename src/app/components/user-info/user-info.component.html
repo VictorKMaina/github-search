@@ -1,0 +1,23 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-3 pt-5">
+            <div id="avatar" style="background-image: url({{results.results.avatar_url}});"></div>
+            <!-- Profile picture -->
+            <div class="pl-2">
+                <p class="p-0 m-0 mt-3" id="full-name">{{results.results.name}}</p>
+                <p class="p-0 m-0" id="username"><span class="font-weight-bold">Username ·
+                    </span>{{results.results.login}}</p>
+            </div>
+        </div>
+        <div class="col-lg-9 pl-5 pr-5 bg-light">
+            <p id="title">Repositories</p>
+            <div *ngFor="let repo of results.repos">
+                <div class="repo-name">{{repo.name}}</div> <!-- Repository name -->
+                <div class="repo-desc"><span class="font-weight-bold">Description · </span>{{repo.description}}<span
+                        *ngIf="repo.description == null">No description</span>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

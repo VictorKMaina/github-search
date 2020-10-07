@@ -1,0 +1,13 @@
+<div class="container">
+    <form action="" #form="ngForm" autocomplete="off">
+        <input #input type="text" [(ngModel)]="query.query" name="query">
+        <select name="type" id="" [(ngModel)]="query.type">
+            <option value="User">User</option>
+            <option value="Repository">Repository</option>
+        </select>
+        <button class="btn btn-dark" (click)="this.submit()">Submit</button>
+    </form>
+</div>
+
+<p>{{query.query}}</p>
+<p>{{query.type}}</p>
