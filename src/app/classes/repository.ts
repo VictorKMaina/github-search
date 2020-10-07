@@ -5,6 +5,6 @@ export class Repository {
     public id: number,
     public name: string,
     public owner: User,
-    public description: string
+    public description: string,
   ) {}
 }

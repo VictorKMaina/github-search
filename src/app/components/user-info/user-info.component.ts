@@ -13,9 +13,9 @@ export class UserInfoComponent implements OnInit {
   constructor(public results:RequestService, public repos:RequestService) { }
 
   ngOnInit() {
-    this.results.getData(this.query);
+    this.results.getRepos(this.query);
     setTimeout(()=>{
-      console.log(this.results.repos)
+      console.log(this.repos.repos)
     }, 1000)
     this.repos = this.results.results.repos;
   }
