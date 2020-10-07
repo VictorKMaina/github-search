@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IQuery } from 'src/app/interfaces/query';
 import { RequestService } from 'src/app/services/request.service';
 
@@ -8,17 +8,22 @@ import { RequestService } from 'src/app/services/request.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+
   public query: IQuery = {query:"", type:""};
+  check: boolean = undefined;
 
   constructor(public results:RequestService) { }
 
-  ngOnInit(): void {
-  }
   submit(){
-    this.results.getData(this.query);
     setTimeout(()=>{
-      console.log(this.results.results);
-    }, 1000)
+      if (this.query.type === "User"){
+        this.check = true;
+      } if (this.query.type === "Repository"){
+        this.check = false;
+      }
+    }, 300)
   }
 
+  ngOnInit(): void {
+  }
 }

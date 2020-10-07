@@ -9,5 +9,5 @@
     </form>
 </div>
 
-<p>{{query.query}}</p>
-<p>{{query.type}}</p>
+<app-user-info *ngIf="this.check === true" [query]="this.query"></app-user-info>
+<div *ngIf="this.check === false">repo component</div> <!-- Repo component placeholder-->

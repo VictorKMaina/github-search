@@ -9,7 +9,7 @@ import { IQuery } from "src/app/interfaces/query";
 })
 export class UserInfoComponent implements OnInit {
   @Input() query: IQuery;
-
+  
   constructor(public results:RequestService, public repos:RequestService) { }
 
   ngOnInit() {
