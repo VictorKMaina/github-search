@@ -1,6 +1,6 @@
 <h2 class="text-center mt-5">Search for a <span style="color: green;">user</span> or <span style="color: green;">repository</span>.</h2>
 <div class="container d-flex justify-content-center">
-    <form action="" #form="ngForm" autocomplete="off">
+    <form action="" #form="ngForm" autocomplete="off" class="w-100 text-center">
         <input #input type="text" [(ngModel)]="query.query" name="query" class="m-3">
         <select name="type" id="" [(ngModel)]="query.type" class="m-3">
             <option value="User">User</option>

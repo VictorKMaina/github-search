@@ -2,3 +2,13 @@ h2 {
     font-family: Poppins;
     font-weight: 700;
 }
+[name="query"]{
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+}
+[name="query"], select, button {
+    height: 50px;
+    padding: 10px;
+    min-width: 100px;
+}
