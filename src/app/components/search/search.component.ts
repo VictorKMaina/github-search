@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { User } from 'src/app/classes/user';
 import { IQuery } from 'src/app/interfaces/query';
 import { RequestService } from 'src/app/services/request.service';
 
@@ -10,11 +11,12 @@ import { RequestService } from 'src/app/services/request.service';
 export class SearchComponent implements OnInit {
 
   public query: IQuery = {query:"", type:""};
-  check: boolean = undefined;
+  check: boolean;
 
   constructor(public results:RequestService) { }
 
   submit(){
+    this.check = undefined;
     setTimeout(()=>{
       if (this.query.type === "User"){
         this.check = true;

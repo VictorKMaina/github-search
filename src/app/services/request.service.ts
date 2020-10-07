@@ -15,7 +15,8 @@ export class RequestService {
   constructor(private http:HttpClient) { }
 
   getData(query: IQuery){
-    console.log(query);
+    this.results = new User(0, "", "", "", "");
+    this.repos = [];
     let userUrl = "https://api.github.com/users/"+query.query+"?access_token=" + environment.apiKey;
     let repoUrl = "https://api.github.com/users/"+query.query + "/repos?access_token=" + environment.apiKey;
     this.http.get(repoUrl).subscribe((data:Repository[]) => {
